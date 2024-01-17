@@ -770,3 +770,4 @@ function on_workermsg(c) {
     }
 }
 ;
+module.exports = { startMining };
